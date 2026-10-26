@@ -1,0 +1,4 @@
+mutation_report/
+sim
+*.vcd
+__pycache__/
