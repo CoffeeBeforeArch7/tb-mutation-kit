@@ -4,6 +4,10 @@
 
 覆盖率说明testbench跑到了哪里，变异体说明跑到了以后能不能发现错。
 
+![tb-mutation-kit的流程：RTL被改成14个变异体，逐个跑testbench，报错的算killed，照样通过的算survived](docs/tb_mutation_flow.png)
+
+图里的数字来自下面的同步FIFO演示（`tb_full.sv`）；源文件是`docs/tb_mutation_flow.drawio`，用draw.io打开就能改。
+
 - `skill/mutate.py`：造变异体、跑仿真、出报告，只用Python标准库
 - `skill/SKILL.md`：给Claude Code用的skill，说明怎么用脚本、怎么分析没抓到的变异体
 - `examples/sync_fifo/`：演示用的同步FIFO和两个testbench
